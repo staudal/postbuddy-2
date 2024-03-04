@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/utils";
 import LoadingSpinner from "@/components/loading-spinner";
 import { usePathname } from "next/navigation";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,6 +56,7 @@ export default function RootLayout({
           <>{children}</>
         )}
         <Toaster position="bottom-right" />
+        <SpeedInsights />
       </body>
     </html>
   );
