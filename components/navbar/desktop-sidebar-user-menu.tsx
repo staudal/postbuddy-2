@@ -52,7 +52,7 @@ export default function DesktopSidebarUserMenu() {
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={signout}>
+        <DropdownMenuItem onClick={signout} className="hover:cursor-pointer">
           Log ud
           <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
         </DropdownMenuItem>

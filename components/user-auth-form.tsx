@@ -99,7 +99,7 @@ export function UserAuthForm({ page, className, ...props }: UserAuthFormProps) {
           last_name: lastName,
           company,
         },
-        emailRedirectTo: window.location.origin + "/dashboard/campaigns",
+        emailRedirectTo: `${location.origin}/auth/callback`,
       },
     });
 

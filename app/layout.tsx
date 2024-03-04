@@ -1,5 +1,4 @@
 "use client";
-
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
@@ -8,6 +7,7 @@ import { useStore } from "@/store";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/utils";
 import LoadingSpinner from "@/components/loading-spinner";
+import { usePathname } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +18,7 @@ export default function RootLayout({
 }) {
   const { user, setUser } = useStore();
   const [loading, setLoading] = useState(true);
+  const pathname = usePathname();
 
   async function fetchSession() {
     setLoading(true);
