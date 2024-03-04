@@ -1,5 +1,10 @@
-'use client'
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kampagner",
+  description: "Kampagner",
+};
 
 export default function CampaignsPage() {
-  return <p>Campaigns</p>
+  return <p>Kampagner</p>;
 }

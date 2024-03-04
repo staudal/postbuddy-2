@@ -1,52 +1,5 @@
-import {
-  BarChartIcon,
-  LayoutDashboardIcon,
-  MailsIcon,
-  TagIcon,
-  UsersIcon,
-  WorkflowIcon
-} from "lucide-react";
 import DesktopSidebarUserMenu from "./desktop-sidebar-user-menu";
 import DesktopSidebarNavigation from "./desktop-sidebar-navigation";
-
-const navigation = [
-  {
-    name: "Campaigns",
-    href: "/dashboard/campaigns",
-    icon: MailsIcon,
-    current: true,
-  },
-  {
-    name: "Segments",
-    href: "/dashboard/segments",
-    icon: UsersIcon,
-    current: false,
-  },
-  {
-    name: "Designs",
-    href: "/dashboard/designs",
-    icon: LayoutDashboardIcon,
-    current: false,
-  },
-  {
-    name: "Coupons",
-    href: "/dashboard/coupons",
-    icon: TagIcon,
-    current: false,
-  },
-  {
-    name: "Integrations",
-    href: "/dashboard/integrations",
-    icon: WorkflowIcon,
-    current: false,
-  },
-  {
-    name: "Reports",
-    href: "/dashboard/reports",
-    icon: BarChartIcon,
-    current: false,
-  },
-];
 
 export default function DesktopSidebar({ user }: { user: any }) {
   return (
@@ -61,7 +14,9 @@ export default function DesktopSidebar({ user }: { user: any }) {
                   <DesktopSidebarNavigation />
                 </ul>
               </li>
-              <DesktopSidebarUserMenu user={user} />
+              <div className="mt-auto w-full">
+                <DesktopSidebarUserMenu />
+              </div>
             </ul>
           </nav>
         </div>

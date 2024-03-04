@@ -1,55 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import {
-  BarChartIcon,
-  LayoutDashboardIcon,
-  MailsIcon,
-  TagIcon,
-  UsersIcon,
-  WorkflowIcon,
-} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const navigation = [
-  {
-    name: "Campaigns",
-    href: "/dashboard/campaigns",
-    icon: MailsIcon,
-    current: true,
-  },
-  {
-    name: "Segments",
-    href: "/dashboard/segments",
-    icon: UsersIcon,
-    current: false,
-  },
-  {
-    name: "Designs",
-    href: "/dashboard/designs",
-    icon: LayoutDashboardIcon,
-    current: false,
-  },
-  {
-    name: "Coupons",
-    href: "/dashboard/coupons",
-    icon: TagIcon,
-    current: false,
-  },
-  {
-    name: "Integrations",
-    href: "/dashboard/integrations",
-    icon: WorkflowIcon,
-    current: false,
-  },
-  {
-    name: "Reports",
-    href: "/dashboard/reports",
-    icon: BarChartIcon,
-    current: false,
-  },
-];
+import { navigation } from "@/types/navigation";
 
 export default function MobileSidebarNavigation() {
   const pathname = usePathname();
